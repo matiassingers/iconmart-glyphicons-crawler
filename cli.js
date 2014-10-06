@@ -27,6 +27,6 @@ if (argv.indexOf('--version') !== -1) {
 }
 
 
-iconmartGlyphiconsCrawler(argv[0], function(){
+iconmartGlyphiconsCrawler.run(argv[0], function(){
 
 });
