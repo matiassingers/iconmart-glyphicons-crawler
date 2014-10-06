@@ -4,14 +4,14 @@ var assert = require('assert');
 var cheerio = require('cheerio');
 var iconmartGlyphiconsCrawler = require('./');
 
-describe('fetchWebpage()', function(){
+describe('iconmart-glyphicons-crawler', function(){
   this.timeout(0);
 
   var icons;
   before(function(done){
-    iconmartGlyphiconsCrawler.fetchWebpage()
-      .then(function(response){
-        icons = response;
+    iconmartGlyphiconsCrawler()
+      .then(function(data){
+        icons = data;
 
         done();
       });
@@ -21,7 +21,7 @@ describe('fetchWebpage()', function(){
     assert(icons.length);
   });
 
-  it('each icon should have data-dropdown attr', function(){
-    assert(icons[0].attribs.class);
+  it('each icon should have a correct name', function(){
+    assert(icons[0].name);
   });
 });
