@@ -1,6 +1,8 @@
 # iconmart-glyphicons-crawler [![Build Status](http://img.shields.io/travis/matiassingers/iconmart-glyphicons-crawler.svg?style=flat-square)](https://travis-ci.org/matiassingers/iconmart-glyphicons-crawler) [![Dependency Status](http://img.shields.io/gemnasium/matiassingers/iconmart-glyphicons-crawler.svg?style=flat-square)](https://gemnasium.com/matiassingers/iconmart-glyphicons-crawler)
 > crawls the Iconmart website and formats the icons for GlyphSearch
 
+Adapted version of [octicons-glyphsearch-crawler](https://github.com/matiassingers/octicons-glyphsearch-crawler).
+
 ## Install
 
 ```sh
