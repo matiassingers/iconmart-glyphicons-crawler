@@ -14,7 +14,9 @@ function help() {
       '  ' + pkg.description,
     '',
     '  Example',
-    '    iconmart-glyphicons-crawler ',
+    '    iconmart-glyphicons-crawler /path/to/glyphsearch',
+    '',
+    '    writing file to /path/to/glyphsearch/data/icons-iconmart.json',
     ''
   ].join('\n'));
 }

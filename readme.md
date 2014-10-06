@@ -14,6 +14,13 @@ $ npm install --save iconmart-glyphicons-crawler
 var iconmartGlyphiconsCrawler = require('iconmart-glyphicons-crawler');
 
 iconmartGlyphiconsCrawler()
+  .then(function(icons){
+    console.log(icons.length);
+    // => 512
+    
+    console.log(icons[0]);
+    // => { name: 'i-adjustment', tags: '' }
+  });
 
 ```
 
@@ -28,8 +35,9 @@ $ npm install --global iconmart-glyphicons-crawler
 $ iconmart-glyphicons-crawler --help
 
   Example
-    iconmart-glyphicons-crawler
+    iconmart-glyphicons-crawler /path/to/glyphsearch
     
+    writing file to /path/to/glyphsearch/data/icons-iconmart.json
 ```
 
 
