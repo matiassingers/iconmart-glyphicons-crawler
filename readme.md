@@ -21,7 +21,7 @@ iconmartGlyphiconsCrawler()
     // => 512
     
     console.log(icons[0]);
-    // => { name: 'i-adjustment', tags: '' }
+    // => { name: 'adjustment', tags: '' }
   });
 
 ```

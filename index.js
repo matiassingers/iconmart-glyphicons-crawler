@@ -14,10 +14,10 @@ module.exports = function() {
       var items = $('.preview ul .item-box a i').toArray();
 
       var icons = _.map(items, function(item){
-        var element = $(item);
+        var className = $(item).attr('class');
 
         return {
-          name: element.attr('class'),
+          name: className.slice(2),
           tags: ''
         };
       });
