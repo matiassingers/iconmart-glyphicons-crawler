@@ -3,6 +3,9 @@
 
 Adapted version of [octicons-glyphsearch-crawler](https://github.com/matiassingers/octicons-glyphsearch-crawler).
 
+See [GlyphSearch PR #33](https://github.com/thomaspark/glyphsearch/pull/33) for how this crawler was used.
+
+
 ## Install
 
 ```sh
