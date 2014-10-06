@@ -1,43 +1,27 @@
 'use strict';
 
 var request = require('promise-request');
+var Promise = require('bluebird');
 var cheerio = require('cheerio');
 var _ = require('lodash');
 
-var $;
-
-function run(destination){
-  return fetchWebpage()
-    .then(handleItems);
-}
-
-function fetchWebpage(){
+module.exports = function() {
   var url = 'http://iconmart.in/';
 
   return request(url)
     .then(function(body){
-      $ = cheerio.load(body);
+      var $ = cheerio.load(body);
+      var items = $('.preview ul .item-box a i').toArray();
 
-      return $('.preview ul .item-box a i').toArray();
+      var icons = _.map(items, function(item){
+        var element = $(item);
+
+        return {
+          name: element.attr('class'),
+          tags: ''
+        };
+      });
+
+      return Promise.resolve(icons);
     });
-}
-
-function handleItems(items){
-  var icons = _.map(items, function(item){
-    var element = $(item);
-
-    return {
-      name: element.attr('class'),
-      tags: ''
-    };
-  });
-
-  return {
-    foundation: icons
-  };
-}
-
-module.exports = {
-  run: run,
-  fetchWebpage: fetchWebpage
 };
