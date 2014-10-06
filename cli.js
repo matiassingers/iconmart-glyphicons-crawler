@@ -31,12 +31,12 @@ if (argv.indexOf('--version') !== -1) {
 
 var destination = argv[0];
 
-iconmartGlyphiconsCrawler.run(destination)
-  .then(function(){
+iconmartGlyphiconsCrawler()
+  .then(function(icons){
     var destinationPath = destination ? path.join(destination, 'data') : __dirname;
 
     var file = path.join(destinationPath, 'icons-iconmart.json');
-    var data = JSON.stringify(icons, null, 2);
+    var data = JSON.stringify({ iconmart: icons }, null, 2);
 
     console.log('writing file to', file);
 
