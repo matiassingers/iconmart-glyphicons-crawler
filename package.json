@@ -21,6 +21,12 @@
     "url": "https://github.com/matiassingers/iconmart-glyphicons-crawler"
   },
   "author": "Matias Singers <mail@matiassingers.com> (http://mts.io)",
+  "keywords": [
+    "icons",
+    "glyphs",
+    "fonts",
+    "iconmart"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/matiassingers/iconmart-glyphicons-crawler/issues"
