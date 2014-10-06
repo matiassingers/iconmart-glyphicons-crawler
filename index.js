@@ -3,27 +3,12 @@
 var request = require('promise-request');
 var cheerio = require('cheerio');
 var _ = require('lodash');
-var fs = require('fs');
-var path = require('path');
 
 var $;
 
 function run(destination){
   return fetchWebpage()
-    .then(handleItems)
-    .then(function writeFile(icons) {
-      var destinationPath = destination ? path.join(destination, 'data') : __dirname;
-
-      var file = path.join(destinationPath, 'icons-iconmart.json');
-      var data = JSON.stringify(icons, null, 2);
-
-      console.log('writing file to', file);
-
-      fs.writeFile(file, data, function(error) {
-        if(error)
-          return console.log(error);
-      });
-    });
+    .then(handleItems);
 }
 
 function fetchWebpage(){
