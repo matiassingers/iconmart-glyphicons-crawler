@@ -39,6 +39,6 @@
     "bluebird": "~2.3.4"
   },
   "devDependencies": {
-    "mocha": "1.21.5"
+    "mocha": "~2.0.1"
   }
 }
