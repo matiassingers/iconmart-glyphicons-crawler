@@ -34,7 +34,7 @@
   "homepage": "https://github.com/matiassingers/iconmart-glyphicons-crawler",
   "dependencies": {
     "promise-request": "0.0.1",
-    "cheerio": "~0.17.0",
+    "cheerio": "0.18.0",
     "lodash": "~2.4.1",
     "bluebird": "~2.3.4"
   },
